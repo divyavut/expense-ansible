@@ -5,7 +5,7 @@
     mysql_root_password: ExpenseApp@1
     login_host: mysql.dev.divyavutakanti.com
   tasks: 
-   - name: Install mysql python library
+  - name: Install mysql python library
     ansible.builtin.pip:
       name:
       - PyMySQL

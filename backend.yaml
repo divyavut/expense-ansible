@@ -61,9 +61,14 @@
       login_user: root
       login_password: "{{ mysql_root_password }}"
       login_host: "{{ login_host }}"
-      state: import 
+      target: /app/schema/backend.sql 
       name: all
-      target: /app/schema/backend.sql
+      state: import 
+     
+  - name: reload and restart backend service
+    ansible.builtin.systemd:
+      state: restarted
+      daemon_reload: yes
 
       
 

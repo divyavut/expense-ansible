@@ -20,7 +20,7 @@
   - name: Remove html directory
     ansible.builtin.file:
       path: /usr/share/nginx/html
-      state: dir
+      state: directory
         
   - name: Download backend url
     ansible.builtin.get_url:
